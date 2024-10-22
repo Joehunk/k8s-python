@@ -61,8 +61,6 @@ def get_stream_size(r, key):
         last_item_id = response[-1][0].decode('utf-8')
         timestamp, sequence = last_item_id.split('-')
         last_id = f"{timestamp}-{int(sequence) + 1}"
-        
-        print(f"Last ID is {last_id} repr {repr(last_id)}")
     return total_size
 
 def to_csv(data, prefix):
